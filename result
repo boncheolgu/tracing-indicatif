@@ -1,0 +1,393 @@
+   Compiling tracing-indicatif v0.1.0 (/mnt/workspace/tracing-indicatif)
+    Finished test [unoptimized + debuginfo] target(s) in 0.56s
+     Running target/debug/deps/tracing_indicatif-3714495bebfbabb1
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+     Running target/debug/deps/fmt-4d00acc91a371510
+
+running 1 test
+register_callsite: Metadata { name: "upper span", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:21, fields: {thread_id}, callsite: Identifier(0x5564801a3118), kind: Kind(Span) }
+
+new_span: 1 Attributes { metadata: Metadata { name: "upper span", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:21, fields: {thread_id}, callsite: Identifier(0x5564801a3118), kind: Kind(Span) }, values: ValueSet { thread_id: 0, callsite: Identifier(0x5564801a3118) }, parent: Current }
+
+new_span: 2 Attributes { metadata: Metadata { name: "upper span", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:21, fields: {thread_id}, callsite: Identifier(0x5564801a3118), kind: Kind(Span) }, values: ValueSet { thread_id: 2, callsite: Identifier(0x5564801a3118) }, parent: Current }
+
+enter: Id(2)
+
+register_callsite: Metadata { name: "event tests/fmt.rs:26", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:26, fields: {message, number_of_yaks}, callsite: Identifier(0x5564801a3130), kind: Kind(Event) }
+
+enter: Id(1)
+
+event: Event { fields: ValueSet { message: preparing to shave yaks, number_of_yaks: 3, callsite: Identifier(0x5564801a3130) }, metadata: Metadata { name: "event tests/fmt.rs:26", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:26, fields: {message, number_of_yaks}, callsite: Identifier(0x5564801a3130), kind: Kind(Event) }, parent: Current }
+
+register_callsite: Metadata { name: "shave_all", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:33, fields: {yaks, thread_id}, callsite: Identifier(0x5564801a3088), kind: Kind(Span) }
+
+new_span: 3 Attributes { metadata: Metadata { name: "shave_all", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:33, fields: {yaks, thread_id}, callsite: Identifier(0x5564801a3088), kind: Kind(Span) }, values: ValueSet { yaks: 3, thread_id: 2, callsite: Identifier(0x5564801a3088) }, parent: Current }
+
+enter: Id(3)
+
+register_callsite: Metadata { name: "shaving_yaks", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:42, fields: {yaks}, callsite: Identifier(0x5564801a30a0), kind: Kind(Span) }
+
+event: Event { fields: ValueSet { message: preparing to shave yaks, number_of_yaks: 3, callsite: Identifier(0x5564801a3130) }, metadata: Metadata { name: "event tests/fmt.rs:26", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:26, fields: {message, number_of_yaks}, callsite: Identifier(0x5564801a3130), kind: Kind(Event) }, parent: Current }
+
+new_span: 4 Attributes { metadata: Metadata { name: "shaving_yaks", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:42, fields: {yaks}, callsite: Identifier(0x5564801a30a0), kind: Kind(Span) }, values: ValueSet { yaks: 3, callsite: Identifier(0x5564801a30a0) }, parent: Current }
+
+enter: Id(4)
+
+new_span: 5 Attributes { metadata: Metadata { name: "shave_all", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:33, fields: {yaks, thread_id}, callsite: Identifier(0x5564801a3088), kind: Kind(Span) }, values: ValueSet { yaks: 3, thread_id: 0, callsite: Identifier(0x5564801a3088) }, parent: Current }
+
+enter: Id(5)
+
+new_span: 6 Attributes { metadata: Metadata { name: "shaving_yaks", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:42, fields: {yaks}, callsite: Identifier(0x5564801a30a0), kind: Kind(Span) }, values: ValueSet { yaks: 3, callsite: Identifier(0x5564801a30a0) }, parent: Current }
+
+enter: Id(6)
+
+register_callsite: Metadata { name: "event tests/fmt/yak_shave.rs:46", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:46, fields: {message}, callsite: Identifier(0x5564801a30b8), kind: Kind(Event) }
+
+event: Event { fields: ValueSet { message: shaving yaks, callsite: Identifier(0x5564801a30b8) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:46", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:46, fields: {message}, callsite: Identifier(0x5564801a30b8), kind: Kind(Event) }, parent: Current }
+
+register_callsite: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }
+
+new_span: 7 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 1, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(7)
+
+register_callsite: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+register_callsite: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }
+
+new_span: 8 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(8)
+
+event: Event { fields: ValueSet { message: shaving yaks, callsite: Identifier(0x5564801a30b8) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:46", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:46, fields: {message}, callsite: Identifier(0x5564801a30b8), kind: Kind(Event) }, parent: Current }
+
+new_span: 9 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 1, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(9)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 10 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(10)
+
+register_callsite: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }
+
+event: Event { fields: ValueSet { message: yak shaved successfully, callsite: Identifier(0x5564801a3070) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }, parent: Current }
+
+exit: Id(8)
+
+exit: Id(7)
+
+register_callsite: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }
+
+event: Event { fields: ValueSet { yak: 1, shaved: true, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+register_callsite: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }
+
+event: Event { fields: ValueSet { yaks_shaved: 1, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+new_span: 11 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 2, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(11)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 12 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(12)
+
+event: Event { fields: ValueSet { message: yak shaved successfully, callsite: Identifier(0x5564801a3070) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }, parent: Current }
+
+exit: Id(10)
+
+exit: Id(9)
+
+event: Event { fields: ValueSet { yak: 1, shaved: true, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 1, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+new_span: 13 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 2, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(13)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 14 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(14)
+
+event: Event { fields: ValueSet { message: yak shaved successfully, callsite: Identifier(0x5564801a3070) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }, parent: Current }
+
+exit: Id(12)
+
+exit: Id(11)
+
+event: Event { fields: ValueSet { yak: 2, shaved: true, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 2, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+new_span: 15 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 3, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(15)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 16 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(16)
+
+event: Event { fields: ValueSet { message: yak shaved successfully, callsite: Identifier(0x5564801a3070) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }, parent: Current }
+
+exit: Id(14)
+
+exit: Id(13)
+
+event: Event { fields: ValueSet { yak: 2, shaved: true, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 2, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+new_span: 17 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 3, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(17)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 18 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(18)
+
+register_callsite: Metadata { name: "event tests/fmt/yak_shave.rs:22", target: "fmt::yak_shave", level: Level(Warn), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:22, fields: {message}, callsite: Identifier(0x5564801a3058), kind: Kind(Event) }
+
+event: Event { fields: ValueSet { message: could not locate yak, callsite: Identifier(0x5564801a3058) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:22", target: "fmt::yak_shave", level: Level(Warn), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:22, fields: {message}, callsite: Identifier(0x5564801a3058), kind: Kind(Event) }, parent: Current }
+
+exit: Id(16)
+
+exit: Id(15)
+
+event: Event { fields: ValueSet { yak: 3, shaved: false, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+register_callsite: Metadata { name: "event tests/fmt/yak_shave.rs:56", target: "fmt::yak_shave", level: Level(Error), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:56, fields: {message, yak, error}, callsite: Identifier(0x5564801a30e8), kind: Kind(Event) }
+
+event: Event { fields: ValueSet { message: failed to shave yak, yak: 3, error: missing yak, callsite: Identifier(0x5564801a30e8) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:56", target: "fmt::yak_shave", level: Level(Error), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:56, fields: {message, yak, error}, callsite: Identifier(0x5564801a30e8), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 2, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { message: could not locate yak, callsite: Identifier(0x5564801a3058) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:22", target: "fmt::yak_shave", level: Level(Warn), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:22, fields: {message}, callsite: Identifier(0x5564801a3058), kind: Kind(Event) }, parent: Current }
+
+exit: Id(18)
+
+exit: Id(17)
+
+event: Event { fields: ValueSet { yak: 3, shaved: false, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { message: failed to shave yak, yak: 3, error: missing yak, callsite: Identifier(0x5564801a30e8) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:56", target: "fmt::yak_shave", level: Level(Error), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:56, fields: {message, yak, error}, callsite: Identifier(0x5564801a30e8), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 2, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+exit: Id(4)
+
+exit: Id(3)
+
+register_callsite: Metadata { name: "event tests/fmt.rs:29", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:29, fields: {message, all_yaks_shaved}, callsite: Identifier(0x5564801a3148), kind: Kind(Event) }
+
+event: Event { fields: ValueSet { message: yak shaving completed., all_yaks_shaved: false, callsite: Identifier(0x5564801a3148) }, metadata: Metadata { name: "event tests/fmt.rs:29", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:29, fields: {message, all_yaks_shaved}, callsite: Identifier(0x5564801a3148), kind: Kind(Event) }, parent: Current }
+
+exit: Id(2)
+
+new_span: 19 Attributes { metadata: Metadata { name: "upper span", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:21, fields: {thread_id}, callsite: Identifier(0x5564801a3118), kind: Kind(Span) }, values: ValueSet { thread_id: 3, callsite: Identifier(0x5564801a3118) }, parent: Current }
+
+enter: Id(19)
+
+event: Event { fields: ValueSet { message: preparing to shave yaks, number_of_yaks: 3, callsite: Identifier(0x5564801a3130) }, metadata: Metadata { name: "event tests/fmt.rs:26", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:26, fields: {message, number_of_yaks}, callsite: Identifier(0x5564801a3130), kind: Kind(Event) }, parent: Current }
+
+new_span: 20 Attributes { metadata: Metadata { name: "shave_all", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:33, fields: {yaks, thread_id}, callsite: Identifier(0x5564801a3088), kind: Kind(Span) }, values: ValueSet { yaks: 3, thread_id: 3, callsite: Identifier(0x5564801a3088) }, parent: Current }
+
+enter: Id(20)
+
+exit: Id(6)
+
+exit: Id(5)
+
+new_span: 21 Attributes { metadata: Metadata { name: "shaving_yaks", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:42, fields: {yaks}, callsite: Identifier(0x5564801a30a0), kind: Kind(Span) }, values: ValueSet { yaks: 3, callsite: Identifier(0x5564801a30a0) }, parent: Current }
+
+enter: Id(21)
+
+event: Event { fields: ValueSet { message: yak shaving completed., all_yaks_shaved: false, callsite: Identifier(0x5564801a3148) }, metadata: Metadata { name: "event tests/fmt.rs:29", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:29, fields: {message, all_yaks_shaved}, callsite: Identifier(0x5564801a3148), kind: Kind(Event) }, parent: Current }
+
+exit: Id(1)
+
+new_span: 22 Attributes { metadata: Metadata { name: "upper span", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:21, fields: {thread_id}, callsite: Identifier(0x5564801a3118), kind: Kind(Span) }, values: ValueSet { thread_id: 1, callsite: Identifier(0x5564801a3118) }, parent: Current }
+
+enter: Id(22)
+
+event: Event { fields: ValueSet { message: preparing to shave yaks, number_of_yaks: 3, callsite: Identifier(0x5564801a3130) }, metadata: Metadata { name: "event tests/fmt.rs:26", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:26, fields: {message, number_of_yaks}, callsite: Identifier(0x5564801a3130), kind: Kind(Event) }, parent: Current }
+
+new_span: 23 Attributes { metadata: Metadata { name: "shave_all", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:33, fields: {yaks, thread_id}, callsite: Identifier(0x5564801a3088), kind: Kind(Span) }, values: ValueSet { yaks: 3, thread_id: 1, callsite: Identifier(0x5564801a3088) }, parent: Current }
+
+enter: Id(23)
+
+new_span: 24 Attributes { metadata: Metadata { name: "shaving_yaks", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:42, fields: {yaks}, callsite: Identifier(0x5564801a30a0), kind: Kind(Span) }, values: ValueSet { yaks: 3, callsite: Identifier(0x5564801a30a0) }, parent: Current }
+
+enter: Id(24)
+
+event: Event { fields: ValueSet { message: shaving yaks, callsite: Identifier(0x5564801a30b8) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:46", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:46, fields: {message}, callsite: Identifier(0x5564801a30b8), kind: Kind(Event) }, parent: Current }
+
+new_span: 25 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 1, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(25)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 26 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(26)
+
+event: Event { fields: ValueSet { message: shaving yaks, callsite: Identifier(0x5564801a30b8) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:46", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:46, fields: {message}, callsite: Identifier(0x5564801a30b8), kind: Kind(Event) }, parent: Current }
+
+new_span: 27 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 1, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(27)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 28 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(28)
+
+event: Event { fields: ValueSet { message: yak shaved successfully, callsite: Identifier(0x5564801a3070) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }, parent: Current }
+
+exit: Id(26)
+
+exit: Id(25)
+
+event: Event { fields: ValueSet { yak: 1, shaved: true, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 1, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+new_span: 29 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 2, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(29)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 30 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(30)
+
+event: Event { fields: ValueSet { message: yak shaved successfully, callsite: Identifier(0x5564801a3070) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }, parent: Current }
+
+exit: Id(28)
+
+exit: Id(27)
+
+event: Event { fields: ValueSet { yak: 1, shaved: true, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 1, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+new_span: 31 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 2, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(31)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 32 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(32)
+
+event: Event { fields: ValueSet { message: yak shaved successfully, callsite: Identifier(0x5564801a3070) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }, parent: Current }
+
+exit: Id(30)
+
+exit: Id(29)
+
+event: Event { fields: ValueSet { yak: 2, shaved: true, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 2, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+new_span: 33 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 3, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(33)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 34 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(34)
+
+event: Event { fields: ValueSet { message: yak shaved successfully, callsite: Identifier(0x5564801a3070) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:28", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:28, fields: {message}, callsite: Identifier(0x5564801a3070), kind: Kind(Event) }, parent: Current }
+
+exit: Id(32)
+
+exit: Id(31)
+
+event: Event { fields: ValueSet { yak: 2, shaved: true, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 2, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+new_span: 35 Attributes { metadata: Metadata { name: "shave", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:10, fields: {yak}, callsite: Identifier(0x5564801a3010), kind: Kind(Span) }, values: ValueSet { yak: 3, callsite: Identifier(0x5564801a3010) }, parent: Current }
+
+enter: Id(35)
+
+event: Event { fields: ValueSet { message: hello! I'm gonna shave a yak, excitement: "yay!", callsite: Identifier(0x5564801a3028) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:17", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:17, fields: {message, excitement}, callsite: Identifier(0x5564801a3028), kind: Kind(Event) }, parent: Current }
+
+new_span: 36 Attributes { metadata: Metadata { name: "shaving_a_yak", target: "fmt::yak_shave", level: Level(Info), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:18, fields: {}, callsite: Identifier(0x5564801a3040), kind: Kind(Span) }, values: ValueSet { callsite: Identifier(0x5564801a3040) }, parent: Current }
+
+enter: Id(36)
+
+event: Event { fields: ValueSet { message: could not locate yak, callsite: Identifier(0x5564801a3058) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:22", target: "fmt::yak_shave", level: Level(Warn), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:22, fields: {message}, callsite: Identifier(0x5564801a3058), kind: Kind(Event) }, parent: Current }
+
+exit: Id(34)
+
+exit: Id(33)
+
+event: Event { fields: ValueSet { yak: 3, shaved: false, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { message: failed to shave yak, yak: 3, error: missing yak, callsite: Identifier(0x5564801a30e8) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:56", target: "fmt::yak_shave", level: Level(Error), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:56, fields: {message, yak, error}, callsite: Identifier(0x5564801a30e8), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 2, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { message: could not locate yak, callsite: Identifier(0x5564801a3058) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:22", target: "fmt::yak_shave", level: Level(Warn), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:22, fields: {message}, callsite: Identifier(0x5564801a3058), kind: Kind(Event) }, parent: Current }
+
+exit: Id(36)
+
+exit: Id(35)
+
+event: Event { fields: ValueSet { yak: 3, shaved: false, callsite: Identifier(0x5564801a30d0) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:51", target: "yak_events", level: Level(Debug), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:51, fields: {yak, shaved}, callsite: Identifier(0x5564801a30d0), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { message: failed to shave yak, yak: 3, error: missing yak, callsite: Identifier(0x5564801a30e8) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:56", target: "fmt::yak_shave", level: Level(Error), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:56, fields: {message, yak, error}, callsite: Identifier(0x5564801a30e8), kind: Kind(Event) }, parent: Current }
+
+event: Event { fields: ValueSet { yaks_shaved: 2, callsite: Identifier(0x5564801a3100) }, metadata: Metadata { name: "event tests/fmt/yak_shave.rs:60", target: "fmt::yak_shave", level: Level(Trace), module_path: "fmt::yak_shave", location: tests/fmt/yak_shave.rs:60, fields: {yaks_shaved}, callsite: Identifier(0x5564801a3100), kind: Kind(Event) }, parent: Current }
+
+exit: Id(21)
+
+exit: Id(20)
+
+event: Event { fields: ValueSet { message: yak shaving completed., all_yaks_shaved: false, callsite: Identifier(0x5564801a3148) }, metadata: Metadata { name: "event tests/fmt.rs:29", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:29, fields: {message, all_yaks_shaved}, callsite: Identifier(0x5564801a3148), kind: Kind(Event) }, parent: Current }
+
+exit: Id(19)
+
+exit: Id(24)
+
+exit: Id(23)
+
+event: Event { fields: ValueSet { message: yak shaving completed., all_yaks_shaved: false, callsite: Identifier(0x5564801a3148) }, metadata: Metadata { name: "event tests/fmt.rs:29", target: "fmt", level: Level(Info), module_path: "fmt", location: tests/fmt.rs:29, fields: {message, all_yaks_shaved}, callsite: Identifier(0x5564801a3148), kind: Kind(Event) }, parent: Current }
+
+exit: Id(22)
+
+test it_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+   Doc-tests tracing-indicatif
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
